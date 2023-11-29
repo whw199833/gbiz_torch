@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="gbiz_torch",
-    version="0.0.4",
+    version="0.0.5",
     packages=find_packages(),
     install_requires=[
         "torch>=1.12.0",
