@@ -1,3 +1,13 @@
+[![Python Versions](https://img.shields.io/pypi/pyversions/gbiz_torch.svg)](https://pypi.org/project/gbiz_torch)
+[![TensorFlow Versions](https://img.shields.io/badge/PyTorch-1.12+-blue.svg)](https://pypi.org/project/gbiz_torch)
+[![Downloads](https://pepy.tech/badge/gbiz_torch)](https://pepy.tech/project/gbiz_torch)
+[![PyPI Version](https://img.shields.io/pypi/v/deepctr.svg)](https://pypi.org/project/gbiz_torch)
+[![GitHub Issues](https://img.shields.io/github/issues/whw199833/gbiz_torch.svg
+)](https://github.com/whw199833/gbiz_torch/issues)
+<!-- [![Activity](https://img.shields.io/github/last-commit/whw199833/gbiz_torch.svg)](https://github.com/whw199833/gbiz_torch/commits/master) -->
+
+[![License](https://img.shields.io/github/license/whw199833/gbiz_torch.svg)](https://github.com/whw199833/gbiz_torch/blob/master/LICENSE)
+
 ## Introduction to gbiz_torch
 
 A comprehensive toolkit designed to help you accurately predict key metrics such as Click-Through Rates (CTR), Conversion Rates (CVR), uplift, and pricing strategies. Built with state-of-the-art algorithms and user-friendly interfaces, our package streamlines the process of forecasting and decision-making, allowing you to make data-driven choices with confidence. Whether you're looking to optimize your marketing campaigns, boost sales conversions, or fine-tune your pricing model, our package provides the insights you need to succeed in today's competitive market.
