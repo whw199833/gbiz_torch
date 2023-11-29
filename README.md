@@ -4,9 +4,9 @@
 [![PyPI Version](https://img.shields.io/pypi/v/deepctr.svg)](https://pypi.org/project/gbiz_torch)
 [![GitHub Issues](https://img.shields.io/github/issues/whw199833/gbiz_torch.svg
 )](https://github.com/whw199833/gbiz_torch/issues)
-<!-- [![Activity](https://img.shields.io/github/last-commit/whw199833/gbiz_torch.svg)](https://github.com/whw199833/gbiz_torch/commits/master) -->
-
+[![DOI](https://zenodo.org/badge/724196606.svg)](https://zenodo.org/doi/10.5281/zenodo.10222798)
 [![License](https://img.shields.io/github/license/whw199833/gbiz_torch.svg)](https://github.com/whw199833/gbiz_torch/blob/master/LICENSE)
+[![Activity](https://img.shields.io/github/last-commit/whw199833/gbiz_torch.svg)](https://github.com/whw199833/gbiz_torch/commits/master)
 
 ## Introduction to gbiz_torch
 
