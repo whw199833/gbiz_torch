@@ -73,3 +73,31 @@ In the consolidated algorithms, the following Layer networks have been implement
 | 20 | BiLinearInteractionLayer     | Last feature net in Fibinet|
 | 21 | CoActionLayer                | co-action unit layer in CAN|
 | 22 | MaskBlockLayer               | MaskBlockLayer in MaskNet|
+
+## Citation
+If you find this code useful in your research, please cite it using the following BibTeX:
+
+```bibtex
+@software{
+  Wang_gbiz_torch_A_comprehensive_2023,
+  author = {Wang, Haowen},
+  doi = {10.5281/zenodo.10222799},
+  month = nov,
+  title = {{gbiz_torch: A comprehensive toolkit for predicting key metrics in e-commercial fields}},
+  url = {https://github.com/whw199833/gbiz_torch},
+  version = {2.0.4},
+  year = {2023}
+}
+```
+or following APA:
+```APA
+Wang, H. (2023). gbiz_torch: A comprehensive toolkit for predicting key metrics in e-commercial fields (Version 2.0.4) [Computer software]. https://doi.org/10.5281/zenodo.10222799
+```
+
+## Contact
+If you have some questions or some advice, or want to contribute to this repo, do not hesitate to contact me: 
+
+mail: wanghw@zju.edu.cn
+
+wechat: whw199833
+
