@@ -6,6 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "torch>=1.12.0",
+        "scikit-learn>=1.2.2",
     ],
 
     author="Haowen Wang",
@@ -20,10 +21,6 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.6+",
     ],
 )
