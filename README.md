@@ -10,7 +10,7 @@
 
 ## Introduction to gbiz_torch
 
-A comprehensive toolkit designed to help you accurately predict key metrics such as Click-Through Rates (CTR), Conversion Rates (CVR), uplift, and pricing strategies. Built with state-of-the-art algorithms and user-friendly interfaces, our package streamlines the process of forecasting and decision-making, allowing you to make data-driven choices with confidence. Whether you're looking to optimize your marketing campaigns, boost sales conversions, or fine-tune your pricing model, our package provides the insights you need to succeed in today's competitive market.
+[A comprehensive toolkit package](https://pypi.org/project/gbiz-torch/) designed to help you accurately predict key metrics such as Click-Through Rates (CTR), Conversion Rates (CVR), uplift, and pricing strategies. Built with state-of-the-art algorithms and user-friendly interfaces, our package streamlines the process of forecasting and decision-making, allowing you to make data-driven choices with confidence. Whether you're looking to optimize your marketing campaigns, boost sales conversions, or fine-tune your pricing model, our package provides the insights you need to succeed in today's competitive market.
 
 ### Universal Layers in Commercial Algorithms
 
