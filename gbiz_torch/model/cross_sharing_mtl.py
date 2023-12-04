@@ -1,7 +1,5 @@
 # coding: utf-8
-# @Author: anbo
-# @Date: 2022-02-08
-# Copyright (c) Antfin, Inc. All rights reserved.
+# @Author: Haowen Wang
 
 import torch
 import torch.nn as nn

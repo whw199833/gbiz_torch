@@ -17,38 +17,53 @@ You can learn to use the package by referring to the examples in the directory `
 
 More solution examples will be released soon~
 
+### Useful Eval Matrix
+The following eval matrix has been implemented:
+
+| #  | Eval Matrix         | Explanation               | Note           |
+|----|------------------|---------------------|----------------|
+| 1  | AUC   | Area Under the ROC Curve            | For Classification       |
+| 2  | Confusion_Matrix     | Confusion Matrix is a performance measurement for classification            | For Classification       |
+| 3  | ACC_F1_score    | Accuracy, Macro-F1 and Weighted-F1            | For Classification       |
+| 4  | Top_K_Acc   | top_k_accuracy_score            | For Classification       |
+| 5  | Multi_Class_RP    | Multi Class precision, recall and F-beta            | For Classification       |
+| 6  | r2_score    | R2_score            | For Classification       |
+| 7  | MAE    | Mean Absolute Error            | For Regression       |
+| 8  | MSE    | Mean Square Error            | For Regression       |
+| 9  | MAPE    | Mean Absolute Percentage Error            | For Regression       |
+| 10  | tsne    | t-distributed stochastic neighbor embedding            | For Manifold       |
+| 11  | sp_emb    | spectral decomposition to the corresponding graph laplacian            | For Manifold       |
+
 ### Universal Layers in Commercial Algorithms
 
 The models currently implemented in recommendation algorithms:
 
 | #  | Model Name         | model               | Note           |
 |----|------------------|---------------------|----------------|
-| 1  | Wide and Deep    | WndModel            | Traditional recommendations       |
+| 1  | Wide and Deep    | [WndModel](https://arxiv.org/abs/1606.07792)            | Traditional recommendations       |
 | 2  | DNN              | DNNModel            | Traditional recommendations       |
-| 3  | DeepFM           | DeepFMModel         | Traditional recommendations       |
-| 4  | Deep and Cross   | DCNModel            | Traditional recommendations       |
-| 5  | XDeepFM          | xDeepFMModel        | Traditional recommendations       |
-| 6  | NFM              | NFMModel            | Traditional recommendations       |
-| 7  | Tower            | TowerModel          | Traditional recommendations       |
-| 8  | FLEN             | FLENModel           | Traditional recommendations       |
-| 9  | Fibinet          | FiBiNetModel        | Traditional recommendations       |
-| 10 | InterHAt         | InterHAtModel       | Traditional recommendations       |
-| 11 | CAN              | CANModel            | Traditional recommendations       |
-| 12 | MaskNet          | MaskNetModel        | Traditional recommendations       |
-| 13 | ContextNet       | ContextNetModel     | Traditional recommendations       |
-| 14 | EDCN             | EDCNModel           | Traditional recommendations       |
-| 15 | BertSeq          | Bert4RecModel       | Sequence recommendation       |
-| 16 | GRU4Rec          | GRU4RecModel        | Sequence recommendation       |
-| 17 | DIN              | DINModel            | Sequence recommendation       |
-| 18 | DFN              | DFNModel            | Sequence recommendation       |
-| 19 | DCAP             | DCAPModel           | Sequence recommendation       |
-| 20 | FBAS             | FBASModel           | Sequence recommendation       |
-| 21 | ESMM             | ESMMModel           | Multi objective recommendation     |
-| 22 | MMoE             | GeneralMMoEModel    | Multi objective recommendation     |
-| 23 | Hard Sharing     | HardSharingModel    | Multi objective recommendation     |
-| 24 | Cross Sharing    | CrossSharingModel   | Multi objective recommendation     |
-| 25 | Cross Stitch     | CrossStitchModel    | Multi objective recommendation     |
-| 26 | PLE              | PLEModel            | Multi objective recommendation     |
+| 3  | DeepFM           | [DeepFMModel](https://arxiv.org/abs/1703.04247)         | Traditional recommendations       |
+| 4  | Deep and Cross   | [DCNModel](https://arxiv.org/abs/1708.05123)            | Traditional recommendations       |
+| 5  | NFM              | [NFMModel](https://arxiv.org/abs/1708.05027)            | Traditional recommendations       |
+| 6  | Tower            | TowerModel          | Traditional recommendations       |
+| 7  | FLEN             | [FLENModel](https://arxiv.org/pdf/1911.04690.pdf)           | Traditional recommendations       |
+| 8  | Fibinet          | [FiBiNetModel](https://arxiv.org/abs/1905.09433)        | Traditional recommendations       |
+| 9 | InterHAt         | [InterHAtModel](https://dl.acm.org/doi/pdf/10.1145/3336191.3371785)       | Traditional recommendations       |
+| 10 | CAN              | [CANModel](https://arxiv.org/abs/2011.05625)            | Traditional recommendations       |
+| 11 | MaskNet          | [MaskNetModel](https://arxiv.org/abs/2102.07619)        | Traditional recommendations       |
+| 12 | ContextNet       | [ContextNetModel](https://arxiv.org/abs/2107.12025)     | Traditional recommendations       |
+| 13 | EDCN             | [EDCNModel](https://dl.acm.org/doi/abs/10.1145/3459637.3481915)           | Traditional recommendations       |
+| 14 | BertSeq          | [Bert4RecModel](https://arxiv.org/abs/1904.06690)       | Sequence recommendation       |
+| 15 | GRU4Rec          | [GRU4RecModel](https://arxiv.org/abs/1511.06939)        | Sequence recommendation       |
+| 16 | DIN              | [DINModel](https://arxiv.org/abs/1706.06978)            | Sequence recommendation       |
+| 17 | DCAP             | [DCAPModel](https://arxiv.org/abs/2105.08649)           | Sequence recommendation       |
+| 18 | FBAS             | FBASModel           | Sequence recommendation       |
+| 19 | ESMM             | [ESMMModel](https://arxiv.org/abs/1804.07931)           | Multi objective recommendation     |
+| 20 | MMoE             | [GeneralMMoEModel](https://dl.acm.org/doi/10.1145/3219819.3220007)    | Multi objective recommendation     |
+| 21 | Hard Sharing     | HardSharingModel    | Multi objective recommendation     |
+| 22 | Cross Sharing    | CrossSharingModel   | Multi objective recommendation     |
+| 23 | Cross Stitch     | [CrossStitchModel](https://arxiv.org/pdf/1604.03539.pdf)    | Multi objective recommendation     |
+| 24 | PLE              | [PLEModel](https://dl.acm.org/doi/10.1145/3383313.3412236)            | Multi objective recommendation     |
 
 ### Universal Layers in Commercial Algorithms
 

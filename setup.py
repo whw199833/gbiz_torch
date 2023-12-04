@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="gbiz_torch",
-    version="0.0.5",
+    version="0.0.6.1",
     packages=find_packages(),
     install_requires=[
         "torch>=1.12.0",
@@ -21,6 +21,10 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.6+",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
     ],
 )
