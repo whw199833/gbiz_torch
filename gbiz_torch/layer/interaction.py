@@ -16,7 +16,7 @@ class FMLayer(nn.Module):
       Developer: Haowen Wang
 
       Input shape
-          - 3D tensor with shape: ``(batch_size,field_size,embedding_size)``.
+          - 3D tensor with shape: ``(batch_size, field_size, embedding_size)``.
 
       Output shape
           - 2D tensor with shape: ``(batch_size, dim)``.
