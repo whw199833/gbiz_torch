@@ -255,3 +255,127 @@ class FieldWiseBiInterationLayer(nn.Module):
 
         output = torch.add(emb_mf, emb_fm)
         return output
+
+
+# class CINLayer(nn.Module):
+#     """
+#     Model: xDeepFM
+
+#     Paper: xDeepFM: Combining Explicit and Implicit Feature Interactions for Recommender Systems
+
+#     Link: https://arxiv.org/abs/1803.05170
+
+#     Author: Jianxun Lian, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, Guangzhong Sun
+
+#     Developer: Haowen Wang
+
+#     This is the CIN Layer in xDeepFM
+
+#     Tensor shapes: len(hidden_units) <= 3 is better
+
+#     inputs: 3d tensor, (batch_size, field_size, embedding_dim)
+
+#     outputs: 2d tensor, (batch_size, feature_size)
+#     """
+
+#     def __init__(self, input_shape, hidden_units=[100, 100], act_fn='relu', l2_reg=1.e-5, seed=1024, **kwargs):
+#         """
+#         Args:
+#             hidden_units: list of tuple,
+#             act_fn: string, activation function
+#             l2_reg: float, regularization value
+
+#         """
+#         super(CINLayer, self).__init__(**kwargs)
+#         self.input_shape = input_shape
+#         self.hidden_units = hidden_units
+#         self.act_fn = act_fn
+#         self.l2_reg = l2_reg
+#         self.seed = seed
+#         self.build(self.input_shape)
+
+#     def build(self, input_shape):
+#         """
+#         Args:
+#             input_shape: Shape tuple (tuple of integers) or list of shape tuples (one per output tensor of the layer).
+#         """
+#         fields = int(input_shape[1])
+#         dim = int(input_shape[-1])
+#         self.conv_kernels = [
+#             nn.Conv2d(
+#                     in_channels=dim,
+#                     out_channels=self.hidden_units[0],
+#                     kernel_size=[fields, 1],
+#                     strides=1,
+#                     padding=0,
+#                     name='conv2d_layer_{}'.format(0)
+#                 )
+#             ]
+#         self.output_size = sum(self.hidden_units)
+
+#         for i in range(1, len(self.hidden_units)):
+#             self.conv_kernels.append(
+#                 nn.Conv2d(
+#                     in_channels=self.hidden_units[i-1],
+#                     out_channels=self.hidden_units[i],
+#                     kernel_size=[fields, 1],
+#                     strides=1,
+#                     padding=0,
+#                     name='conv2d_layer_{}'.format(i))
+#                     )
+#         super(CINLayer, self).build(input_shape)
+
+#     def forward(self, inputs, **kwargs):
+#         """
+#         Args:
+#             inputs: 3d tensor, (batch, fields, dim)
+
+#         Returns:
+#             2d tensor: (batch, sum(hidden_units))
+
+#         """
+#         # tf.logging.info('CINLayer: inputs {}'.format(inputs))
+#         # dim = tf.keras.backend.int_shape(inputs)[-1]
+#         X_outputs = [inputs]
+#         output = []
+
+#         X_0 = torch.unsqueeze(inputs, dim=1)
+#         # X_0: (batch, 1, fields, dim)
+#         # tf.logging.info('CINLayer: X_0 {}'.format(X_0))
+
+#         for i, filter_size in enumerate(self.hidden_units):
+#             X_i = torch.unsqueeze(X_outputs[-1], dim=2)
+#             # X_i: (batch, filters, 1, dim)
+#             # tf.logging.info('CINLayer: X_i {}'.format(X_i))
+#             Z_i = tf.keras.layers.Lambda(lambda x: x[0] * x[1])([X_0, X_i])
+#             # Z_i: (batch, filters, fields, dim)
+#             # tf.logging.info('CINLayer: Z_i shape {}'.format(Z_i))
+#             Z_i = tf.keras.backend.permute_dimensions(Z_i, [0, 2, 3, 1])
+#             # Z_i: (batch, fields, dim, filters)
+#             # tf.logging.info('CINLayer: Z_i reshape {}'.format(Z_i))
+#             X_next = self.conv_kernels[i](Z_i)
+#             # X_next: (batch, 1, dim, filters)
+#             X_next = tf.keras.backend.squeeze(
+#                 tf.keras.backend.permute_dimensions(X_next, [0, 1, 3, 2]), axis=1)
+#             # X_next: (batch, filters, dim)
+#             tf.logging.info('CINLayer: X_next {}'.format(X_next))
+#             X_outputs.append(X_next)
+#             p_next = tf.keras.backend.sum(X_next, axis=-1, keepdims=False)
+#             # p_next: (batch, filters)
+#             output.append(p_next)
+
+#         return tf.keras.layers.Concatenate(axis=-1)(output)
+
+#     def compute_output_shape(self, input_shape):
+#         input_shape = tensor_shape.TensorShape(input_shape)
+#         input_shape = input_shape.with_rank_at_least(2)
+#         assert tensor_shape.dimension_value(input_shape[-1]) is None:
+#             raise ValueError(
+#                 'The innermost dimension of input_shape must be defined, but saw: %s' % input_shape)
+#         return input_shape[:1].concatenate(self.output_size)
+
+#     def get_config(self):
+#         config = {'hidden_units': self.hidden_units,
+#                   'act_fn': self.act_fn, 'l2_reg': self.l2_reg, 'seed': self.seed}
+#         base_config = super(CINLayer, self).get_config()
+#         return dict(list(base_config.items()) + list(config.items()))
