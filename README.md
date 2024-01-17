@@ -69,6 +69,11 @@ The models currently implemented in recommendation algorithms:
 
 In the consolidated algorithms, the following Layer networks have been implemented, which can be conveniently called by higher-level models, or users can directly call the Layer layers to assemble their own models.
 
+| #  | Graph-based Layer                        | Note                                                                                    |
+|----|------------------------------|-----------------------------------------------------------------------------------------|
+| 1  | HOMOGNNLayer                     | General GNN layers for Homogeneity  Graph (GCNConv, GATConv, SAGEConv, TransformerConv, ARMAConv)                |
+| 2  | HETEGNNLayer                     | General GNN layers for heterogeneous Graph (HGTConv,HANConv)  |
+
 | #  | Layer                        | Note                                                                                    |
 |----|------------------------------|-----------------------------------------------------------------------------------------|
 | 1  | DNNLayer                     | DNN Net                |
