@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import torch_geometric.nn as g_nn
 
 
-class DNNLayer(nn.s):
+class DNNLayer(nn.Module):
     """
       Model: The Multi Layer Perceptron
 
